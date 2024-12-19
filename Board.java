@@ -13,26 +13,20 @@ public class Board {
     }
 
     public char getCell(int cellNumberX, int cellNumberY){
-        return (char) this.table[cellNumberX][cellNumberY];
+        return this.table[cellNumberX][cellNumberY];
     }
 
     public void printBoard(){
+
+        System.out.println();
         for (char[] row : table) {
             for (char column : row) {
                 System.out.print(String.format("[%s]", column));
             }
             System.out.println();
         }
+        System.out.println();
     }
 
-    public void setPlayerInCell(char playerInput){
-        for(int row = 0; row <= 2; row++){
-            for (int col = 0; col <= 2; col++) {
-                if (this.table[row][col] == playerInput) {
-                    this.table[row][col] = playerInput;
-                }
-            }
-        }
-    }
     
 }
